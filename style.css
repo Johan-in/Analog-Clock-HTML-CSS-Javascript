@@ -8,8 +8,24 @@
 }
 
 :root{
+    -primary: #fff;
+    --secondary: #000;
     --opacity: 0.15;
     --inset-opacity: 0.1;
+    --boarder-color: white;
+    transition: all 0,5s ease-in-out;
+
+}
+
+html.dark {
+    --primary: #000;
+    --secondary: #fff;
+    --opacity: 0.15;
+    --inset-opacity: 0.1;
+    --boarder-color: rgba(75,75,75,0.1);
+    transition: all 0,5s ease-in-out;
+    background-color: rgba(34, 34, 34);
+
 }
 
 
@@ -25,6 +41,15 @@ body {
    position: absolute;
    bottom: 100px;
    left: 50%;
+   transform: translate(-50%);
+   padding: 10px 20px;
+   background-color: transparent;
+   border: 5px solid var(--boarder-color);
+   color: var(--secondary);
+   box-shadow: 0px 0px 25px 1px rgba(0,0,0,var(--opacity)), 2px 2px 20px
+   3px rgba(0,0,0,var(--inset-opacity)) inset;
+   text-transform: uppercase;
+   font-family: 'Montserrat', sans-serif;
 }
 
 .clock-container {
@@ -35,10 +60,12 @@ body {
 
 .time {
     font-size: 60px;
+    color: var(--secondary);
 }
 
 .date {
     font-size: 30px;
+    color: var(--secondary);
 }
 
 .clock {
@@ -48,9 +75,52 @@ body {
     border-radius: 50%;
     box-shadow: 0px 0px 25px 1px rgba(0,0,0,var(--opacity)), 2px 2px 20px
     3px rgba(0,0,0,var(--inset-opacity)) inset;
-    border: 7px solid white;
+    border: 7px solid var(--boarder-color);
     margin-bottom: 50px;
+    position: relative;
 
-    
 }
 
+.hand {
+
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform-origin: bottom center;
+
+}
+
+.hand.hour {
+    background-color: var(--secondary);
+    width:5px;
+    height: 55px;
+    transform: translate(-50%, -100%) rotate(0deg);
+
+}
+
+.hand.minute {
+    background-color: var(--secondary);
+    width:3px;
+    height: 70px;
+    transform: translate(-50%, -100%) rotate(0deg);
+
+}
+
+.hand.second {
+    background-color: rgb(197, 58, 58);
+    width:2px;
+    height: 80px;
+    transform: translate(-50%, -100%) rotate(0deg);
+
+}
+
+.center-point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(197, 58, 58);
+    border-radius: 50%;
+}

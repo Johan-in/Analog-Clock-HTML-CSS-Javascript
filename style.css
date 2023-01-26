@@ -42,7 +42,8 @@ body {
    bottom: 100px;
    left: 50%;
    transform: translate(-50%);
-   padding: 10px 20px;
+   padding: 10px 40px;
+   margin-top: 75px;
    background-color: transparent;
    border: 5px solid var(--boarder-color);
    color: var(--secondary);

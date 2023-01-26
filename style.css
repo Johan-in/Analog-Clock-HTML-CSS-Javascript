@@ -42,7 +42,7 @@ body {
    bottom: 100px;
    left: 50%;
    transform: translate(-50%);
-   padding: 10px 40px;
+   padding: 10px 20px;
    background-color: transparent;
    border: 5px solid var(--boarder-color);
    color: var(--secondary);
@@ -56,7 +56,7 @@ body {
     display:flex;
     flex-direction:column;
     align-items: center;
-    margin-bottom: 200px;
+    
 }
 
 .time {
